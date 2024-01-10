@@ -1,0 +1,30 @@
+Run the dockerfile using below command
+$ docker build -t react-app:01 .
+
+Run the docker image using below command and run docker container on locally
+$ docker run -d -p 3000:3000 --name react-app react-app
+
+Assign a tag name to the docker image 
+$ docker tag react-app:01 undaresunil/react-app:01
+
+Login DockerHub
+$ docker Login
+
+Push docker image to the docker Repository 
+$ docker push undaresunil/reactapp:01
+
+Create a Kubernetes folder and create a deployment & service file.
+
+Start minikube
+$ minukube start
+
+Check status of minikube
+$ minikube status
+
+deploy kubernetes deployment file on minikube 
+$ kubectl apply -f deployment-react-app.yml
+
+deploy kubernetes service file on minikube
+$ kubectl apply -f service-react-app.yml
+
+
